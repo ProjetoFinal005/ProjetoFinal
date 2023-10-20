@@ -5,29 +5,16 @@
   </div>
 
   <div align="center" class="h1Tittle">
-    <h1>Chamados Próximos</h1>
+    <h1>Solicitar Assistencia Técnica</h1>
   </div>
-<!-- 
-  <ion-card class="card-chamado">
-    <ion-card-content>
-      <ul>
-        <li>(nome do cliente)</li>
-        <li>(data e hora da visita)</li>
-        <li>(endereço)</li>
-        <li>(descrição do problema)</li>
-      </ul>
-    </ion-card-content>
-  </ion-card> -->
+
   <ion-card>
     <ion-card-content>
       <form id="cadastroForm">
         <h2 class="titleInput">Nome Completo</h2>
         <ion-input label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
 
-        <h2 class="titleInput">CPF</h2>
-        <ion-input label-placement="floating" fill="outline" type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-00"></ion-input>
-
-           <h2 class="titleInput">E-mail</h2>
+           <h2 class="titleInput">Data e hora da visita</h2>
         <ion-input label-placement="floating" fill="outline" placeholder="Enter text"></ion-input>
 
         <h2 class="titleInput">Telefone</h2>
@@ -36,7 +23,10 @@
         <h2 class="titleInput">CEP</h2>
         <ion-input label-placement="floating" fill="outline" type="text" id="cep" name="cep" required pattern="\d{5}-\d{3}" placeholder="12345-678"></ion-input>
 
-        <ion-button expand="full" shape="round" color="warning"  (click)="buscarEndereco()">Entrar</ion-button>
+        <div align="center">
+          <ion-button expand="full" shape="round" color="warning" (click)="buscarEndereco()">Entrar</ion-button>
+        </div>
+        
       
         <h2 class="titleInput">Endereço</h2>
         <ion-input label-placement="floating" fill="outline"  type="text" id="endereco" name="endereco" readonly></ion-input>
@@ -53,8 +43,10 @@
         <h2 class="titleInput">Descrição do problema</h2>
         <textarea name="" id="" cols="30" rows="10" maxlength="300"class="textDescricao"></textarea>
 
+        <div align="center">
+          <ion-button expand="full" shape="round" color="warning" (click)="cadastrarFuncionario()">Solicitar</ion-button>
+        </div>
         
-        <ion-button expand="full" shape="round" color="warning" (click)="cadastrarFuncionario()">Entrar</ion-button>
       </form>
     </ion-card-content>
   </ion-card>
